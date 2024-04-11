@@ -1,13 +1,9 @@
 package Tree.BinaryTree;
-
- 
-
-     class Node {
+class Node {
          int data;
          Node left;
          Node right;
-
-        public Node (int data) {
+         public Node (int data) {
              this.data = data;
              this.left = null;
              this.right = null;
