@@ -11,17 +11,16 @@ class Node {
      }
 
      public  class BinaryTree {
-          static int idx = -1;
-          public static Node buildTree(int nodes []){
-              idx++;
-             if (nodes[idx] == -1) {
-                 return null;
-             }
-             Node newNode = new Node(nodes[idx]);
-             newNode.left = buildTree(nodes);
-             newNode.right = buildTree(nodes);
 
-             return newNode;
+         public void inorder(Node root){
+             inorderRec(root);
+         }
+         private void inorderRec(Node root){
+             if(root!=null){
+                 inorderRec(root.left);
+                 System.out.print(root.data+" ");
+                 inorderRec(root.right);
+             }
          }
      }
 
