@@ -33,6 +33,16 @@ class Node {
                  preorderRec(root.right);
              }
          }
+         public void postorder(Node root){
+             postorderRec(root);
+         }
+         private void postorderRec(Node root){
+             if(root!=null) {
+                 postorderRec(root.left);
+                 postorderRec(root.right);
+                 System.out.print(root.data + " ");
+             }
+         }
 
      }
 

@@ -20,6 +20,8 @@ public class Example1 {
         bt.inorder(root);
         System.out.println("\nPreorder");
         bt.preorder(root);
+        System.out.println("\nPostorder");
+        bt.postorder(root);
 
 
 
