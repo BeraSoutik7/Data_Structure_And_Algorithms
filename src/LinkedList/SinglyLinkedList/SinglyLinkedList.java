@@ -160,4 +160,32 @@ public class SinglyLinkedList {
        }
        return false;
     }
+    public static void reverseSinglyLL(){
+        if(head==null){
+            System.out.println("Not Possible");
+        }
+        else {
+            Node temp=head;
+            Node prev=null;
+            Node next=null;
+            while(temp!=null){
+                next=temp.next;
+                temp.next=prev;
+                prev=temp;
+                temp=next;
+            }
+            head=prev;
+        }
+    }
+    public static Boolean checkDataExistRec(Node head,int data){
+        if(head==null){
+            return false;
+        }
+        else if(head.data!=data){
+            return checkDataExistRec(head.next,data);
+        }
+        else {
+            return true;
+        }
+    }
 }
