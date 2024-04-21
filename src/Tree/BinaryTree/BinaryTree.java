@@ -10,7 +10,6 @@ class Node {
              this.right = null;
          }
      }
-
      public  class BinaryTree {
 
 
@@ -22,6 +21,16 @@ class Node {
                  inorderRec(root.left);
                  System.out.print(root.data+" ");
                  inorderRec(root.right);
+             }
+         }
+         public void preorder(Node root){
+             preorderRec(root);
+         }
+         private void preorderRec(Node root){
+             if(root!=null){
+                 System.out.print(root.data+" ");
+                 preorderRec(root.left);
+                 preorderRec(root.right);
              }
          }
 

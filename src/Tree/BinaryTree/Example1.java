@@ -16,7 +16,10 @@ public class Example1 {
 //                8
 //              7    12
 //            15  2 555
+        System.out.println("Inorder");
         bt.inorder(root);
+        System.out.println("\nPreorder");
+        bt.preorder(root);
 
 
 
