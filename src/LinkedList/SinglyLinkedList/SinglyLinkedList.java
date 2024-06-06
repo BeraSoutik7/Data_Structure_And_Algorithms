@@ -64,8 +64,9 @@ public class SinglyLinkedList {
             }
             newNode.next = temp.next;
             temp.next=newNode;
+            size++;
         }
-        size++;
+
     }
     public static void pushAtEndIndex(int index, int data){
         if(size-1<index || index<0){
@@ -81,8 +82,9 @@ public class SinglyLinkedList {
             }
             newNode.next = temp.next;
             temp.next = newNode;
+            size++;
         }
-        size++;
+
     }
     public static void deleteAtEnd(){
         if(head==null){
@@ -99,24 +101,27 @@ public class SinglyLinkedList {
                 temp=temp.next;
             }
             temp.next = null;
+            size--;
         }
-        size--;
+
     }
     public static void deleteAtBeg(){
         if(head == null){
             System.out.println("Underflow or Not Possible");
         }
-        head=head.next;
-        size--;
+        else {
+            head = head.next;
+            size--;
+        }
     }
-    public static void deleteByIndex(int index){
+    public static boolean deleteByIndex(int index){
         if(head==null && index > size-1 || index<0){
             System.out.println("Underflow or Not possible");
         }
         else {
             if(index==0){
                 deleteAtBeg();
-                return;
+
             }
             int i=0;
             Node temp = head;
@@ -126,29 +131,35 @@ public class SinglyLinkedList {
             }
             temp.next=temp.next.next;
             size--;
+            return true;
         }
-
+        return false;
     }
-    public static void deleteByValue(int data){
-        if(head==null || !checkDataExist(data)){
+    public static boolean deleteByValue(int data){
+        if(head==null ){
             System.out.println("Underflow");
+        }
+        else if(!checkDataExist(data)){
+            System.out.println("Data does not exist");
         }
         else{
             Node temp = head;
             if(size==1){
                 deleteAtEnd();
-                return;
             }
-            if (head.data==data){
+            else if (head.data==data){
                 deleteAtBeg();
-                return;
             }
-            while (temp.next.data!=data){
-                temp=temp.next;
+            else {
+                while (temp.next.data != data) {
+                    temp = temp.next;
+                }
+                temp.next = temp.next.next;
+                size--;
             }
-            temp.next=temp.next.next;
-            size--;
+            return true;
         }
+        return false;
     }
     public static boolean checkDataExist(int value){
        Node temp = head;
