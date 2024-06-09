@@ -22,8 +22,9 @@ public class Example1 {
         bt.preorder(root);
         System.out.println("\nPostorder");
         bt.postorder(root);
-
-
-
+        System.out.println();
+        System.out.println(bt.countLeaf(root));
+        System.out.println();
+        //System.out.println(bt.minElement(root));
     }
 }

@@ -65,6 +65,7 @@ public class DoublyLinkedList {
             Node temp = head;
             if (index == 0) {
                 pushBeg(data);
+                return;
             } else {
                 while (i != index - 1) {
 

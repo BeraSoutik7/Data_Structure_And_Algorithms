@@ -54,4 +54,17 @@ public class BinarySearchTree {
             System.out.print(root.data + " ");
         }
     }
+    public int minElement(){
+
+        return minElementRec(root);
+    }
+    private int minElementRec(Node root){
+        if(root == null){
+            return -1;
+        }
+        if(root.left == null){
+            return root.data;
+        }
+        return minElementRec(root.left);
+    }
 }

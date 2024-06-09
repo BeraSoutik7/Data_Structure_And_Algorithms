@@ -19,6 +19,8 @@ public class Example1 {
         System.out.println();
         System.out.println("Postorder----->");
         bt.postorder();
+        System.out.println();
+        System.out.println(bt.minElement());
 
 
 

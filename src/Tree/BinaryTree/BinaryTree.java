@@ -11,7 +11,15 @@ class Node {
          }
      }
      public  class BinaryTree {
-
+         public int countLeaf(Node root){
+             if(root == null){
+                 return 0;
+             }
+             if(root.left == null && root.right == null){
+                 return 1;
+             }
+             return countLeaf(root.left)+countLeaf(root.right);
+         }
 
          public void inorder(Node root){
              inorderRec(root);
@@ -42,6 +50,19 @@ class Node {
                  postorderRec(root.right);
                  System.out.print(root.data + " ");
              }
+         }
+         public int minElement(Node root){
+
+             return minElementRec(root);
+         }
+         private int minElementRec(Node root){
+             if(root == null){
+                 return -1;
+             }
+             if(root.left == null){
+                 return root.data;
+             }
+             return minElement(root.left);
          }
 
      }
