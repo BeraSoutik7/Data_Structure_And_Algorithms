@@ -2,7 +2,7 @@ package LinkedList.SinglyLinkedList;
 class Node{
     int data;
     Node next;
-    Node(int data){
+    public Node(int data){
         this.data=data;
         next=null;
     }
@@ -22,6 +22,7 @@ public class SinglyLinkedList {
         }
         System.out.println();
     }
+
     //push at the end of the linked list //TC:0(N)
     public static void pushEnd(int data){
         Node newNode = new Node(data);

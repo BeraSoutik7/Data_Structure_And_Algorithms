@@ -10,6 +10,7 @@ public class CountPair {
         for (int i = 0; i < arr.length; i++) {
             if(mp.containsKey(k-arr[i])){
                 count+=mp.get(k-arr[i]);
+                
             }
             mp.put(arr[i],mp.getOrDefault(arr[i],0)+1);
         }
