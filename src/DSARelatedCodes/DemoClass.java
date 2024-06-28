@@ -1,4 +1,5 @@
 package DSARelatedCodes;
+
 class A{
     void print(){
         System.out.println("hi");
@@ -8,9 +9,13 @@ class A{
     }
 }
 class B extends A{
-    void print(){//run time poly
-        System.out.println("soutik");
-    }
+//    Integer[] print(){//run time poly
+//        System.out.println("soutik");
+//        ArrayList<Integer>  ans  = new ArrayList<>();
+//        Integer []a = new Integer[ans.size()];
+//
+//        return ans.toArray(a);
+//    }
 }
 
 
@@ -23,6 +28,7 @@ public class DemoClass {
     DemoClass(int a,int b){
         this.a=a;
         this.b=b;
+
     }
 
     public static void main(String[] args) {
@@ -32,6 +38,8 @@ public class DemoClass {
         System.out.println(d.a);
         System.out.println(d.b);
         System.out.println(d1.a);
+
+
 
     }
 }
@@ -49,3 +57,4 @@ class z implements x,y{
         System.out.println("Hi");
     }
 }
+
